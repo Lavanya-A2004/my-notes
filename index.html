@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>☰ Notes</h2>
+            <button class="nav-btn active" data-category="All">📁 All</button>
+            <button class="nav-btn" data-category="Study">📚 Study</button>
+            <button class="nav-btn" data-category="Work">💼 Work</button>
+            <button class="nav-btn" data-category="Personal">⭐ Personal</button>
+        </div>
+
+        <!-- Main Content Dashboard -->
+        <div class="main-content">
+            <header>
+                <h1 id="dashboardTitle">Note List - 📁 All</h1>
+                <button id="openModalBtn">Add Note</button>
+            </header>
+
+            <div class="notes-container" id="notesContainer"></div>
+        </div>
+    </div>
+
+    <!-- Add Note Modal Popup -->
+    <div class="modal" id="noteModal">
+        <div class="modal-content">
+            <h3>Add Note</h3>
+            <input type="text" id="noteId" placeholder="Enter the ID (e.g. 101)">
+            <input type="text" id="noteTitle" placeholder="Title">
+            <textarea id="noteDesc" placeholder="Description"></textarea>
+            <select id="notePriority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <select id="noteCategory">
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+            </select>
+            <div class="modal-buttons">
+                <button id="saveNoteBtn">Save</button>
+                <button id="closeModalBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
